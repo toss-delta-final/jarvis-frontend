@@ -6,7 +6,9 @@ function groupTitle(data: ChatListResponse): string {
   if (data.listType === "BUY_ALL") {
     return data.label ? `이렇게 사면 어때요 · ${data.label}` : "이렇게 사면 어때요";
   }
-  return data.label ? `추천 상품 · ${data.label}` : "추천 상품";
+  return data.label
+    ? `조건에 맞는 상품을 골라봤어요 · ${data.label}`
+    : "조건에 맞는 상품을 골라봤어요";
 }
 
 /**
